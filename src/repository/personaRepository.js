@@ -7,7 +7,7 @@ import Persona from "../models/persona.js";
 
 const findAll = async () => {
     try {
-        const result = await Persona.findAll();
+        const result = await Persona.findAll({include: Cita});
         console.log(result)
         return result;
 

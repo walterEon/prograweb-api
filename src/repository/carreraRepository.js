@@ -6,7 +6,7 @@ import Curso from "../models/curso.js";
 const findAll = async () => {
     try {
 
-        const result = await Carrera.findAll();
+        const result = await Carrera.findAll({include: Universidad});
         console.debug(result)
 
         return result;

@@ -5,7 +5,7 @@ import Cita from '../models/cita.js';
 
 const findAll = async () => {
     try {
-        const result = await Curso.findAll();
+        const result = await Curso.findAll({include: Carrera});
         console.log(result)
         return result;
 
