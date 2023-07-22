@@ -256,3 +256,6 @@ Content-Type: application/json
     "grado": "Pregrado"
 }
 ###
+
+GET http://localhost:3001/personas/5
+###

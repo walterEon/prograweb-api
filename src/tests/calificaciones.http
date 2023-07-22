@@ -23,3 +23,6 @@ Content-Type: application/json
     "comentario": "Me ayudó a resolver mis dudas"
 }
 ###
+
+DELETE http://localhost:3001/calificaciones/0
+########

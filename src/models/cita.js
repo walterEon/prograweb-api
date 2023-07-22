@@ -37,15 +37,18 @@ const Cita = sequelize.define('citas', {
     }
 })
 
-Cita.belongsTo(Persona, {
-    foreignKey: 'idPersonaDocente',
-    targetId: 'idPersona'
-})
 
 Cita.belongsTo(Persona, {
     foreignKey: 'idPersonaAlumno',
     targetId: 'idPersona'
 })
+
+Cita.belongsTo(Persona, {
+    foreignKey: 'idPersonaDocente',
+    targetId: 'idPersona'
+})
+
+
 
 Cita.belongsTo(Curso, {
     foreignKey: 'idCurso',
@@ -57,15 +60,18 @@ Curso.hasOne(Cita, {
     targetId: 'idCurso'
 })
 
-Persona.hasOne(Cita, {
+
+Persona.hasMany(Cita, {
+    foreignKey: 'idPersonaAlumno',
+    targetId: 'idPersona'
+})
+
+Persona.hasMany(Cita, {
     foreignKey: 'idPersonaDocente',
     targetId: 'idPersona'
 })
 
-Persona.hasOne(Cita, {
-    foreignKey: 'idPersonaAlumno',
-    targetId: 'idPersona'
-})
+
 
 
 

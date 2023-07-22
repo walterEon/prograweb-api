@@ -67,7 +67,7 @@ POST http://localhost:3001/citas
 Content-Type: application/json
 
 {
-    "idCita": 5,
+    "idCita": 7,
     "idPersonaDocente": 3,
     "idPersonaAlumno": 7,
     "fecha": "2023-07-20",
@@ -77,4 +77,24 @@ Content-Type: application/json
     "estado": "Completada",
     "idCurso": 1
 }
+###
+
+POST http://localhost:3001/citas
+Content-Type: application/json
+
+{
+    "idCita": 8,
+    "idPersonaDocente": 12,
+    "idPersonaAlumno": 5,
+    "fecha": "2023-07-24",
+    "horaInicio": "13:00:00",
+    "horaFin": "14:00:00",
+    "enlaceSesion": "https://nothing.com/",
+    "estado": "Pendiente",
+    "idCurso": 6
+}
+###
+
+DELETE http://localhost:3001/citas/7
+Content-Type: application/json
 ###

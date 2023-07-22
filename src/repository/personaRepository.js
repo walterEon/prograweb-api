@@ -4,10 +4,12 @@ import PersonaCurso from "../models/personaCurso.js";
 import Rol from "../models/rol.js";
 import Carrera from "../models/carrera.js";
 import Persona from "../models/persona.js";
+import Universidad from "../models/universidad.js";
+
 
 const findAll = async () => {
     try {
-        const result = await Persona.findAll({include: Cita});
+        const result = await Persona.findAll({include: [Cita, Rol, Carrera, PersonaCurso, Horario]});
         console.log(result)
         return result;
 
